@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Debug*/
+
+.debug .card{
+}
+
+.debug .col{
+    background-color: lightpink;
+}
+
+
+
+/* Regole Css */
+
+header{
+    height: 80px;
+    background-color: rgb(12,132,251);
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+:root{
+    --background-color-card:rgb(181,221,253);
+    --background-secondary: rgb(151,146,228);
+    --background-terz: white;
+}
+
+.container{
+    margin: auto;
+}
+
+#intro{
+    padding-top: 6rem;
+}
+
+.top-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+#intro .card{
+    background-color: var(--background-color-card);
+    border-radius: 1rem;
+    margin-top: 1rem;
+    padding: 1rem;
+}
+
+#strategic, #benefit{
+    background-color: var(--background-secondary);
+    margin-top: 4rem;
+    padding: 3rem 0px;
+}
+
+#strategic .columns{
+    padding: 1rem 0px;
+}
+
+#strategic .col{
+    margin: 1rem 0px;
+}
+
+.text-align{
+    text-align: center;
+}
+
+#testimonial .card{
+    background-color: var(--background-secondary);
+    border-radius: 1rem;
+    margin-top: 1rem;
+    padding: 1rem;
+}
+
+#testimonial{
+    margin-top: 4rem;
+}
+
+#benefit .card{
+    background-color: var(--background-terz);
+    border-radius: 1rem;
+    margin-top: 1rem;
+    padding: 1rem;
+}
+
+
+/* Responsive */
+
+@media screen and (min-width:500px){
+    .container{
+        max-width: 470px ;
+    }
+
+}
+
+@media screen and (min-width:768px){
+    .container{
+        max-width: 738px;
+    }
+
+    #intro .cards{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    #intro .card{
+        width: calc(100% / 3 - 1rem);
+    }
+
+    #testimonial .card{
+        display: flex;
+    }
+
+    #benefit .cards{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    #benefit .card{
+        width: calc(100% / 2 - 1rem);
+    }
+
+}
+
+@media screen and (min-width:992px){
+    .container{
+        max-width: 972px;
+    }
+
+    #intro .grow{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #strategic .columns{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #strategic .col{
+       width: calc(100% / 2 - 1rem);
+    }
+
+    #benefit .card{
+        width: calc(100%/ 3 - 1rem);
+    }
+
+}
+
