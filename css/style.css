@@ -6,14 +6,9 @@
 
 /* Debug*/
 
-.debug .card{
-}
-
 .debug .col{
     background-color: lightpink;
 }
-
-
 
 /* Regole Css */
 
@@ -30,7 +25,8 @@ header{
 :root{
     --background-color-card:rgb(181,221,253);
     --background-secondary: rgb(151,146,228);
-    --background-terz: white;
+    --background-terz: rgb(255,255,255);
+    --background-foot:rgb(51,51,51);
 }
 
 .container{
@@ -55,7 +51,7 @@ header{
     padding: 1rem;
 }
 
-#strategic, #benefit{
+#strategic, #benefit, #information{
     background-color: var(--background-secondary);
     margin-top: 4rem;
     padding: 3rem 0px;
@@ -65,7 +61,7 @@ header{
     padding: 1rem 0px;
 }
 
-#strategic .col{
+.col{
     margin: 1rem 0px;
 }
 
@@ -89,6 +85,11 @@ header{
     border-radius: 1rem;
     margin-top: 1rem;
     padding: 1rem;
+}
+
+footer{
+    background-color: var(--background-foot);
+    padding: 3rem 0px;
 }
 
 
@@ -116,6 +117,10 @@ header{
         width: calc(100% / 3 - 1rem);
     }
 
+    #intro .card:first-child{
+        width: calc((100% / 3 * 2) - 1rem);
+    }
+
     #testimonial .card{
         display: flex;
     }
@@ -129,6 +134,16 @@ header{
     #benefit .card{
         width: calc(100% / 2 - 1rem);
     }
+
+    #about-us .columns{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    #about-us .col{
+        width: calc(100% / 2 - 1rem);
+     }
+
 
 }
 
@@ -148,10 +163,10 @@ header{
     }
 
     #strategic .col{
-       width: calc(100% / 2 - 1rem);
-    }
-
-    #benefit .card{
+        width: calc(100% / 2 - 1rem);
+     }
+    
+     #benefit .card{
         width: calc(100%/ 3 - 1rem);
     }
 
