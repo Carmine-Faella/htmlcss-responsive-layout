@@ -6,10 +6,10 @@
 
 /* Regole Css */
 
-body{
+html{
     font-family: 'Open Sans', sans-serif;
     scroll-behavior: smooth;
-    scroll-margin-top: 85px;
+    scroll-padding-top: 90px;
 }
 
 header{
@@ -22,6 +22,10 @@ header{
     width: 100%;
 }
 
+h2{
+    font-size: 2.5rem;
+}
+
 :root{
     --color-blue: rgb(12,132,251);
     --background-color-card:rgb(181,221,253);
@@ -29,6 +33,7 @@ header{
     --background-terz: rgb(255,255,255);
     --background-foot:rgb(51,51,51);
     --color-black:black;
+    --color-text-yellow:rgb(249,193,95);
 }
 
 .container{
@@ -50,7 +55,7 @@ header{
 #intro .card{
     background-color: var(--background-color-card);
     border-radius: 1rem;
-    margin-top: 1rem;
+    margin-top: 2rem;
     padding: 2rem;
 }
 
@@ -86,7 +91,7 @@ header{
 #benefit .card{
     background-color: var(--background-terz);
     border-radius: 1rem;
-    margin-top: 1rem;
+    margin-top: 2rem;
     padding: 1rem;
 }
 
@@ -112,7 +117,7 @@ nav{
     display: none;
 }
 
-header a{
+a{
     text-decoration: none;
 }
 
@@ -137,10 +142,10 @@ header li{
 }
 
 .bt-big{
-    padding: 5px 1.5rem;
+    padding: 0.5rem 2.5rem;
 }
 
-#intro p{
+p{
     line-height: 2rem;
     margin: 2rem 0px;
 }
@@ -183,13 +188,12 @@ img{
     margin-top: 3rem;
 }
 
-#strategic .columns h2, #testimonial h2{
+#strategic .columns h2, #testimonial h2, #information h2{
     margin: 2rem 0px;
 }
 
 .bt-violet{
     background-color: var(--background-secondary);
-    margin-top: 2rem;
 }
 
 .text-violet{
@@ -204,12 +208,93 @@ img{
     border-radius: 50%;
 }
 
-#testimonial p{
-    padding: 2rem 0px;
+#about-us{
+    margin: 5rem 0;
+}
+
+#about-us img{
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
 }
 
 #benefit .cards{
     margin-top: 2.5rem;
+}
+
+#benefit .card{
+    padding: 2rem;
+}
+
+.number{
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+#about-us .img{
+    position: relative;
+}
+
+#about-us .position{
+    font-size: 3rem;
+    padding-bottom: 1rem;
+    margin-left: 1rem;
+}
+
+#about-us .position{
+    position: absolute;
+    top: 0;
+    left: 25%;
+}
+
+.margin-right{
+    margin-right: 0.5rem;
+}
+
+.opacity{
+    opacity: 0.3;
+}
+
+#information .yellow-text{
+    font-size: 4rem;
+    font-weight: bold;
+    color: var(--color-text-yellow);
+}
+
+#information .bt-white{
+    background-color: var(--background-terz);
+    padding: 1.2rem 5rem;
+    border-radius: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+#information ul{
+   display: flex;
+   justify-content: center;
+}
+
+#information li{
+    margin-left: 1.5rem;
+}
+
+.list{
+    list-style: none;
+}
+
+footer p, ul{
+    line-height: 1.2rem;
+}
+
+#information li:last-child, footer a{
+    text-decoration: underline;
+}
+
+#intro .icon-apple{
+    font-size: 1rem;
+    color:var(--background-terz)
 }
 
 /* Responsive */
@@ -221,7 +306,7 @@ img{
 
     #testimonial .container{
         text-align: center;
-    }
+    }    
 
 }
 
@@ -279,6 +364,23 @@ img{
         text-align: left;
      }
 
+     #about-us .col1{
+        width: 70%;
+        margin: 2rem 1rem;
+    }
+    
+    #about-us .col2{
+        width: 20%;
+        margin: 2rem 1rem;
+    }
+
+    #about-us .position{
+        position: absolute;
+        top: 0;
+        left: 70%;
+    }
+    
+
 }
 
 @media screen and (min-width:992px){
@@ -322,6 +424,27 @@ img{
         margin: auto;
     }
 
+    #about-us .position{
+        position: absolute;
+        top: 0;
+        left: 50%;
+    }
+
+    #intro .img{
+        padding: 0;
+        align-self: flex-end;
+        width: 50%;
+    }
+
+    .first-card-text{
+        width: 50%;
+    }
+
+    #intro img{
+        padding: 0;
+        width: 100%;
+        padding-right: 2rem;
+    }
 }
 
 @media screen and (min-width:1200px) {
