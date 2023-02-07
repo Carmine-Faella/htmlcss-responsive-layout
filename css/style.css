@@ -4,17 +4,17 @@
     box-sizing: border-box;
 }
 
-/* Debug*/
-
-.debug .col{
-    background-color: lightpink;
-}
-
 /* Regole Css */
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    scroll-behavior: smooth;
+    scroll-margin-top: 85px;
+}
 
 header{
     height: 80px;
-    background-color: rgb(12,132,251);
+    background-color: var(--color-blue);
     position: fixed;
     z-index: 999;
     top: 0;
@@ -23,14 +23,17 @@ header{
 }
 
 :root{
+    --color-blue: rgb(12,132,251);
     --background-color-card:rgb(181,221,253);
     --background-secondary: rgb(151,146,228);
     --background-terz: rgb(255,255,255);
     --background-foot:rgb(51,51,51);
+    --color-black:black;
 }
 
 .container{
     margin: auto;
+    padding: 0px 1rem;
 }
 
 #intro{
@@ -48,7 +51,7 @@ header{
     background-color: var(--background-color-card);
     border-radius: 1rem;
     margin-top: 1rem;
-    padding: 1rem;
+    padding: 2rem;
 }
 
 #strategic, #benefit, #information{
@@ -92,6 +95,85 @@ footer{
     padding: 3rem 0px;
 }
 
+header .icon{
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+.text-white{
+    color: var(--background-terz);
+}
+
+.text-black{
+    color: var(--color-black);
+}
+
+nav{
+    display: none;
+}
+
+header a{
+    text-decoration: none;
+}
+
+header li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 1rem;
+}
+
+header li .text-white{
+    opacity: 0.7;
+}
+
+.button{
+    border-radius: 1rem;
+    padding: 5px 10px;
+}
+
+.bt-white{
+    background-color: var(--background-terz);
+}
+
+.bt-blue{
+    background-color: var(--color-blue);
+}
+
+.bt-big{
+    padding: 5px 1.5rem;
+}
+
+#intro p{
+    line-height: 2rem;
+    margin: 2rem 0px;
+}
+
+img{
+    width: 100%;
+    display: block;
+}
+
+#intro img{
+    padding:2rem 2rem 0px 2rem ;
+}
+
+#intro .card:first-child{
+    padding: 0;
+}
+
+.first-card-text{
+    padding: 1rem;
+}
+
+#intro i{
+    color: var(--color-blue);
+    font-size: 6rem;
+}
+
+#intro h3{
+    color: var(--color-blue);
+    margin: 2rem 0;
+}
 
 /* Responsive */
 
@@ -144,6 +226,9 @@ footer{
         width: calc(100% / 2 - 1rem);
      }
 
+     #intro img{
+        padding-right: 10rem;
+     }
 
 }
 
@@ -170,5 +255,19 @@ footer{
         width: calc(100%/ 3 - 1rem);
     }
 
+    nav{
+        display: block;
+    }
+
+    header .icon{
+        display: none;
+    }
+
+}
+
+@media screen and (min-width:1200px) {
+    .container{
+        max-width: 1170px;
+    }
 }
 
