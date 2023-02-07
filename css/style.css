@@ -74,8 +74,8 @@ header{
 
 #testimonial .card{
     background-color: var(--background-secondary);
-    border-radius: 1rem;
-    margin-top: 1rem;
+    border-radius: 2rem;
+    margin-top: 2rem;
     padding: 1rem;
 }
 
@@ -122,13 +122,10 @@ header li{
     margin-left: 1rem;
 }
 
-header li .text-white{
-    opacity: 0.7;
-}
-
 .button{
     border-radius: 1rem;
     padding: 5px 10px;
+    display: inline-block;
 }
 
 .bt-white{
@@ -175,11 +172,55 @@ img{
     margin: 2rem 0;
 }
 
+#strategic .img-plan1{
+    margin-bottom: 6rem;
+}
+
+.background-col{
+    background-color: var(--background-terz);
+    padding: 2rem;
+    border-radius: 2rem;
+    margin-top: 3rem;
+}
+
+#strategic .columns h2, #testimonial h2{
+    margin: 2rem 0px;
+}
+
+.bt-violet{
+    background-color: var(--background-secondary);
+    margin-top: 2rem;
+}
+
+.text-violet{
+    color: var(--background-secondary);
+}
+
+#testimonial img{
+    height: 150px;
+    width: 150px;
+    margin: 0 auto;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+#testimonial p{
+    padding: 2rem 0px;
+}
+
+#benefit .cards{
+    margin-top: 2.5rem;
+}
+
 /* Responsive */
 
 @media screen and (min-width:500px){
     .container{
         max-width: 470px ;
+    }
+
+    #testimonial .container{
+        text-align: center;
     }
 
 }
@@ -230,6 +271,14 @@ img{
         padding-right: 10rem;
      }
 
+     #testimonial img{
+        margin-right: 1.5rem;
+     }
+
+     #testimonial .cards{
+        text-align: left;
+     }
+
 }
 
 @media screen and (min-width:992px){
@@ -261,6 +310,16 @@ img{
 
     header .icon{
         display: none;
+    }
+
+    .background-col{
+        align-self: flex-end;
+        margin-left: 5rem;
+    }
+
+    .background-col img{
+        width: 70%;
+        margin: auto;
     }
 
 }
